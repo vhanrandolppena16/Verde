@@ -13,7 +13,7 @@ st.sidebar.title("Navigation")
 page = st.sidebar.radio("Go to", ["Home", "Page 1 (HTML)", "Page 2 (Python)"])
 
 if page == "Page 1 (HTML)":
-    st.components.v1.html(load_html("pages/page1.html"), height=500, scrolling=True)
+    st.components.v1.html(load_html("pages/page-1.html"), height=500, scrolling=True)
 
 elif page == "Page 2 (Python)":
     from pages import page2  # Import Python page
