@@ -9,6 +9,13 @@ def load_html(file_path):
         return f.read()
 
 st.title("Home Page")
+
+header_container = st.container()
+with header_container:
+    st.markdown("<h1 style='text-align: center; color: blue;'>📌 My Streamlit App</h1>", unsafe_allow_html=True)
+
+st.write("This is the main content of the app.")
+
 st.sidebar.title("Navigation")
 page = st.sidebar.radio("Go to", ["Home", "Page 1 (HTML)", "Page 2 (Python)"])
 
