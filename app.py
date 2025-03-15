@@ -9,10 +9,28 @@ def load_html(file_path):
         return f.read()
 
 st.title("Home Page")
+import streamlit as st
 
-header_container = st.container()
-with header_container:
-    st.markdown("<h1 style='text-align: center; color: blue;'>📌 My Streamlit App</h1>", unsafe_allow_html=True)
+# Custom CSS for header styling
+st.markdown(
+    """
+    <style>
+        .custom-header {
+            background-color: #3498db;  /* Blue background */
+            color: white;              /* White text */
+            padding: 15px;             /* Some padding */
+            font-size: 24px;           /* Font size */
+            font-weight: bold;         /* Bold text */
+            border-radius: 5px;        /* Rounded corners */
+            text-align: left;          /* Left alignment */
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Display the header
+st.markdown('<div class="custom-header">📌 My Streamlit App</div>', unsafe_allow_html=True)
 
 st.write("This is the main content of the app.")
 
